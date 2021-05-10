@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "IDとパスワードを入力してください"
+AuthUserFile /Applications/MAMP/htdocs/form/mainte/.htpasswd
+require valid-user
