@@ -56,6 +56,7 @@ if (!empty($_POST['btn_submit'])) {
           $csrfToken = bin2hex(random_bytes(24));
           $_SESSION['csrfToken'] = $csrfToken;
         }
+        var_dump($_SESSION['csrfToken']);
         $token = $_SESSION['csrfToken'];
         ?>
 
@@ -226,7 +227,7 @@ if (!empty($_POST['btn_submit'])) {
     </div>
     </div>
     </div>
-    
+
   <?php endif; ?>
 
 
