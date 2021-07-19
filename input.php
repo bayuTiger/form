@@ -32,8 +32,7 @@ if (!empty($_POST['btn_submit'])) {
 <!DOCTYPE html>
 <html lang="ja">
 
-<!doctype html>
-<html lang="en">
+
 
 <head>
   <!-- Required meta tags -->
@@ -56,7 +55,7 @@ if (!empty($_POST['btn_submit'])) {
           $csrfToken = bin2hex(random_bytes(24));
           $_SESSION['csrfToken'] = $csrfToken;
         }
-        var_dump($_SESSION['csrfToken']);
+        // var_dump($_SESSION['csrfToken']);
         $token = $_SESSION['csrfToken'];
         ?>
 
@@ -80,7 +79,7 @@ if (!empty($_POST['btn_submit'])) {
               <!-- valueの値が複雑になっているのは、確認画面から戻ってきたときに値を保持しておくため、POSTで状態を渡したままにしている -->
               <input type="text" class="form-control" id="your_name" name="your_name" value="<?php if (!empty($_POST['your_name'])) {
                                                                                                   echo h($_POST['your_name']);
-                                                                                                } ?>" required>
+                                                                                                } ?>" >
             </div>
 
 
